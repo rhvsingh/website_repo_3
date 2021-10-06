@@ -167,6 +167,10 @@ nav.white ul{
     color: #fff;
 }
 
+#contactus{
+color:#fff;
+}
+
 @media screen and (max-width: 700px) {
     #footer_more div {
         margin-top: 20px;
