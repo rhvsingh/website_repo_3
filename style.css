@@ -171,7 +171,7 @@ p {
 #footer-more-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin: 100px 0px;
 }
 
 .footer_more {
