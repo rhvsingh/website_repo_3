@@ -13,7 +13,6 @@
                     $('nav ul').toggleClass('showing');
                 });
             });
-            
             $(window).on('scroll', function() {
                 if($(window).scrollTop()) {
                     $('nav').addClass('white');
@@ -56,7 +55,7 @@
             Junk really means “RUBBISH”. And so, are we eating “Rubbish Foods”? Considering the ingredients, mostly every doctor suggests his patients not to eat them, but to have fresh fruits and vegetables.
             <br /><br />
             Foods like pizza , burger, french fries , cold drinks , etc are called junk foods. They are very harmful for our body. This type of food do not have the right proportion of nutrients for us to stay healthy. These provide us with only fats that gets stored in our bodies and cause many diseases. Junk food will always make us obese which is a state far from healthy.
-            <br><br>
+            <br> <br>
             Now-days many companies produce packed foods which are really harmful to a body, if the body doesn’t do much exercise. Mostly in every packed food, there are high fat, sugar etc... , which affects the body badly. There will be no nutritional values for many of them and only benefit an in-taker feel in those foods is its taste. Skin problems like pimples occur because of excess in take of oil. The junk foods are mostly prepared by oils which may not be suitable for one’s body type.
             <br /><br />
             There are many cases which reports obesity found in small age groups. it causes severe effects in one's life. Eating while watching TV can increase the intake of foods and it can surely damage the body. There is no problem in eating foods, which guarantee you about its nutritional values.
@@ -67,7 +66,68 @@
             As we already know that "all that glitters is not gold!" And in this context we can say, all that is tasty is not nutritious!
         </p>
         </div>
-        
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <br> 
+              <div class="numbertext"></div>
+              <img src="Images\junkFood1.jpeg" style="width:100%">
+              <div class="text"></div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext"></div>
+              <img src="Images\junkFood2.jpeg" style="width:100%">
+              <div class="text"></div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext"></div>
+              <img src="Images\junkFood3.jpeg" style="width:100%">
+              <div class="text"></div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+
          <div id="footer">
 
         <div id="footer_content">
@@ -193,5 +253,6 @@
         <!---End of trade--->
     </div>
     <!---End of footer--->
+    
     </body>
 </html>
