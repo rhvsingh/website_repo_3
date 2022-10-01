@@ -211,32 +211,24 @@
                 <div class="footer_more" id="contactus">
 
                     <!----Start of form---->
-
-                    <div id="form">
-
-                        <h2>Contact Us</h2>
-
+                    
+                    <div class="container">
                         <form action="mail.php" method="post">
-
-                            <div >
-                                <input type="text" name="username" title="Enter Your Name" required>
-                                <label>Name</label>
-                            </div>
-
-                            <div>
-                                <input type="email" name="email" title="Enter Your Email ID" required><label>Email</label>
-                            </div>
-
-                            <div>
-                                <textarea name="comment" required></textarea>
-                                <label>Feedback</label>
-                            </div>
-
-                            <div>
-                                <input type="submit">
-                            </div>
-
-                        </form>
+                            <h2>Contact Us</h2>
+                      
+                            <div class="container">
+                                  <label for="fname">Name</label>
+                                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                              
+                                  <label for="lname">Email</label>
+                                  <input type="text" id="lname" name="lastname" placeholder="Your Email">
+                              
+                                  <label for="subject">Feedback</label>
+                                  <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
+                              
+                                  <input type="submit" value="Submit">
+                                </form>
+                              </div>
 
                     </div>
 
