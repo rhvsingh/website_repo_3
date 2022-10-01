@@ -3,8 +3,7 @@
     padding: 0;
 }
 body{
-    font-family: 'Montserrat', sans-serif;
-    height: 100%;
+        font-family: 'Aclonica';
 }
 #header{
     height: auto;
@@ -12,10 +11,21 @@ body{
     height: 56vh;
     margin: auto;
     padding: inherit;
-    background: url(fruit.jpg) no-repeat 50% 50%;
+    background: url(Junk-food.jpg) no-repeat 50% 50%;
     background-size: cover;
     overflow: auto;
 }
+h3{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+p{
+    font-size: 20px;
+    color: rgb(136, 0, 0);
+    font-family: 'Aclonica';
+}
+
 #logo{
     float: left;
     position: fixed;
@@ -43,11 +53,11 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     text-align: center;
-    color: #111;
+    color: rgb(51, 255, 0);
     padding: 4px 12px;
 }
 nav ul li a:hover{
-    color: forestgreen;
+    color: rgb(255, 238, 0);
 }
 nav.white ul{
     background: #fff;
@@ -58,8 +68,8 @@ nav.white ul{
     text-align: right;
     box-sizing: border-box;
     cursor: pointer;
-    color: #000;
-    padding: 24px 20px;
+    color: rgb(255, 255, 255);
+    padding: 24px 20px; 
 }
 #para{
     width: 90%;
@@ -115,19 +125,20 @@ nav.white ul{
 #footer_content {
     margin-left: 6%;
     margin-right: 6%;
+    padding-top: 25px;
 }
 
 .footer_content_heading {
     margin: 10px 10px 0px 8px;
     font-family: 'Lato', sans-serif;
-    font-size: 17px;
-    color: #FFFFFF;
+    font-size: 25px;
+    color: #008cff;
 }
 
 .footer_content_body {
     margin: 10px;
     font-family: 'Oxygen', sans-serif;
-    font-size: 13px;
+    font-size: 18px;
     color: rgba(240, 240, 240, 1.00);
 }
 
@@ -226,7 +237,7 @@ color:#fff;
 }
 
 #footer_more_connect ul li:nth-child(3):hover {
-    color: #4dc247;
+    color: #ff0000;
 }
 
 #footer_more_connect ul li:nth-child(4):hover {
@@ -260,7 +271,7 @@ color:#fff;
 }
 
 #footer_more_connect ul li:hover #footer_icons6 {
-    color: #4dc247;
+    color: #ff0000;
 }
 
 #footer_more_connect ul li:hover #footer_icons7 {
