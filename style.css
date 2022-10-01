@@ -1,12 +1,65 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box
 }
-body{
-        font-family: 'Aclonica';
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
 }
-#header{
+
+img {
+    vertical-align: middle;
+}
+
+nav {
+    position: fixed;
     height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    text-align: right;
+    transition: .5s;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px 14px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-align: center;
+    color: rgb(51, 255, 0);
+    padding: 4px 12px;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 238, 0);
+}
+
+nav.white ul {
+    background: rgba(255, 255, 255,0.8);
+}
+
+.menu {
+    display: none;
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    padding: 24px 20px;
+}
+
+#header {
     width: 100%;
     height: 56vh;
     margin: auto;
@@ -15,97 +68,70 @@ body{
     background-size: cover;
     overflow: auto;
 }
-h3{
+
+h3 {
     font-size: 40px;
     color: rgb(0, 0, 0);
 }
 
-p{
-    font-size: 30px;
+p {
+    font-size: 20px;
     color: rgb(136, 0, 0);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Aclonica';
 }
 
-#logo{
+#logo {
     float: left;
     position: fixed;
 }
-#logo_adjust{
-    height: 100%;
+
+#logo_adjust {
+    height: 100px;
 }
-nav{
-    position: fixed;
-    height: auto;
-    width: 100%;
-    box-sizing: border-box;
-}
-nav ul{
-    list-style: none;
-    overflow: hidden;
-    text-align: right;
-    transition: .5s;
-}
-nav ul li{
-    display: inline-block;
-    font-size: 20px;
-    margin: 38px 14px;
-}
-nav ul li a{
-    text-decoration: none;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    padding: 4px 12px;
-}
-nav ul li a:hover{
-    color: rgb(255, 238, 0);
-}
-nav.white ul{
-    background: #fff;
-}
-.menu{
-    display: none;
-    width: 100%;
-    text-align: right;
-    box-sizing: border-box;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    padding: 24px 20px; 
-}
-#para{
+
+#para {
     width: 90%;
     margin: 4em auto;
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
 }
-@media screen and (max-width: 700px){
-    #logo{
+
+@media screen and (max-width: 700px) {
+    #logo {
         position: fixed;
         top: 0;
     }
-    #logo_adjust{
+
+    #logo_adjust {
         height: 80px;
         width: 200px;
     }
-    nav{
+
+    nav {
         background-color: #fff;
     }
-    nav ul{
+
+    nav ul {
         max-height: 0px;
     }
-    nav.white ul{
+
+    nav.white ul {
         background: #fff;
     }
-    .showing{
+
+    .showing {
         max-height: 30em;
     }
-    nav ul li{
+
+    nav ul li {
         box-sizing: border-box;
         width: 100%;
         text-align: center;
         margin: 20px auto;
     }
-    .menu{
+
+    .menu {
         display: block;
     }
 }
@@ -178,8 +204,8 @@ nav.white ul{
     color: #fff;
 }
 
-#contactus{
-color:#fff;
+#contactus {
+    color: #fff;
 }
 
 @media screen and (max-width: 700px) {
@@ -187,6 +213,7 @@ color:#fff;
         margin-top: 20px;
         display: block;
     }
+
     #footer_more ul li {
         display: block;
         margin: 12px 2.5%;
@@ -282,48 +309,118 @@ color:#fff;
     color: #db3236;
 }
 
-#trade{
-color: white;
-text-align: center;
-font-size: 15px;
-padding-bottom: 10px;
+.mySlides {
+    display: none
 }
 
-#form{
-    text-align: center;
-font-size: 15px;
-padding-bottom: 10px;
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    height: 700px;
+    position: relative;
+    margin-inline: auto;
+
 }
 
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 1px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 0px; /* Add a top margin */
-    margin-bottom: 10px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
+.slideshow-container img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
     cursor: pointer;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  /* Add a background color and some padding around the form */
-  .container {
-    border-radius: 5px;
-    background-color: rgb(80, 80, 80);
-    padding: 10px;
-  }
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
