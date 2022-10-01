@@ -145,7 +145,7 @@ nav.white ul{
 #footer-more-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin: 100px 0px;
 }
 
 .footer_more {
@@ -324,6 +324,6 @@ input[type=text], select, textarea {
   /* Add a background color and some padding around the form */
   .container {
     border-radius: 5px;
-    background-color: rgb(80, 80, 80);
+    /* background-color: rgb(80, 80, 80); */
     padding: 10px;
   }
