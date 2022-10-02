@@ -1,0 +1,49 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    min-width:100%;
+    min-height: 100%;
+    background: linear-gradient(rgb(207, 113, 5),rgb(10, 6, 247));
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    top:20vh;
+    left:35vw;
+    background: #091921;
+    height: 70vh;
+    width: 30vw;
+    border-radius: 4vh;
+    box-shadow: 0 0 25px rgb(10, 10, 10);
+    display: inline-block;
+    transition: 0.6s;
+}
+#display{
+    position: relative;
+    left:2.5vw;
+    top:3vh;
+    width:24.5vw;
+    height:10vh;
+    border-radius: 4vh;
+    background: #666;
+    font-size: 3vw;
+    margin-bottom: 2vh;
+}
+table {
+    margin:auto;
+}
+table tr td button {
+    width:6vw;
+    height:10vh;
+    background: teal;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5vw;
+    text-decoration: none;
+    font-size: 2vw;
+    color:whitesmoke;
+}
