@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    background: #191919;
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+.card{
+    position: relative;
+    height: 300px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    background: #262626;
+    z-index: 1;
+}
+.progress .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 35px rgba(0,0,0,0.5);
+}
+/* .progress .card:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: #262626;
+    pointer-events: none;
+    z-index: 1;
+} */
+.percentage{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    background: #222;
+    z-index: 1000;
+}
+.percentage .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.percentage .number h2{
+    color:#fff;
+    font-size:40px;
+}
+.percentage .number h2 span{
+    font-size: 24px;
+    color: #777;
+    transition: 0.5s;
+}
+.text{
+    position: relative;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    text-align: center;
+    z-index: 2;
+}
+svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+}
+svg circle:nth-child(2)
+{
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+@keyframes anime{
+    0%{
+    stroke-dashoffset: calc(440 - 0*(440 *90) /100);
+    }
+    20%{
+    stroke-dashoffset: calc(440 - 0.2*(440 *90) /100);
+    }
+    40%{
+        stroke-dashoffset: calc(440 - 0.4*(440 *90) /100);
+        }
+    60%{
+         stroke-dashoffset: calc(440 - 0.6*(440 *90) /100);
+    }
+    80%{
+        stroke-dashoffset: calc(440 -.8*(440 *90) /100);
+    }
+    100%{
+    stroke-dashoffset: calc(440 - (440 *90) /100);
+    }
+}
+.card:nth-child(1) svg circle:nth-child(2) 
+{
+    animation: anime 2s linear forwards;
+    stroke: #00ff43;
+} 
+.card:nth-child(2) svg circle:nth-child(2) 
+{
+    stroke-dashoffset: calc(440 - (440 *80) /100);
+    stroke: #00a1ff;
+} 
+.card:nth-child(3) svg circle:nth-child(2) 
+{
+    stroke-dashoffset: calc(440 - (440 *65) /100);
+    stroke: #ff04f7;
+} 
+@media only screen and (max-width:650px)
+{
+    .progress{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        margin:30px 0;
+    }
+}
