@@ -22,13 +22,16 @@ section{
 
 @keyframes change{
     0%{
-        background-position: 0 50%;
+        background-position: 0 25%;
+    }
+    25{
+        background-position: 50% 25%;
     }
     50%{
         background-position: 100% 50%;
     }
     100%{
-        background-position: 0 50%;
+        background-position: 0 100%;
     }
 }
 img {
@@ -40,6 +43,7 @@ nav {
     height: auto;
     width: 100%;
     box-sizing: border-box;
+    background-color: #DEE4E7
     z-index: 10;
 }
 
@@ -114,7 +118,10 @@ p {
 #para {
     width: 90%;
     margin: 4em auto;
-    font-size: 20px;
+    font-size: 10px;
+    font-family: sans-serif;
+    background-color: grey;
+    padding: 5px 5px 5px;
     line-height: 30px;
     text-align: justify;
 }
@@ -527,6 +534,6 @@ p {
     .prev,
     .next,
     .text {
-        font-size: 11px
+        font-size: 15px
     }
 }
